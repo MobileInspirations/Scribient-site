@@ -38,27 +38,27 @@ export function TurnstileField({
       });
     };
 
+    let scriptEl: HTMLScriptElement;
+
     if (existingScript) {
+      scriptEl = existingScript;
       if (window.turnstile) {
         renderWidget();
       } else {
-        existingScript.addEventListener("load", renderWidget);
+        scriptEl.addEventListener("load", renderWidget);
       }
-
-      return;
+    } else {
+      scriptEl = document.createElement("script");
+      scriptEl.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+      scriptEl.async = true;
+      scriptEl.defer = true;
+      scriptEl.dataset.turnstile = "true";
+      scriptEl.addEventListener("load", renderWidget);
+      document.head.appendChild(scriptEl);
     }
 
-    const script = document.createElement("script");
-    script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
-    script.async = true;
-    script.defer = true;
-    script.dataset.turnstile = "true";
-    script.addEventListener("load", renderWidget);
-    document.head.appendChild(script);
-
     return () => {
-      existingScript?.removeEventListener("load", renderWidget);
-      script.removeEventListener("load", renderWidget);
+      scriptEl.removeEventListener("load", renderWidget);
       if (widgetIdRef.current && window.turnstile) {
         window.turnstile.remove(widgetIdRef.current);
       }
