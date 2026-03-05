@@ -1,4 +1,4 @@
-export default ({ env }: { env: Strapi.EnvFunction }) => {
+export default ({ env }: { env: any }) => {
   const plugins: Record<string, unknown> = {};
 
   if (env("AWS_BUCKET")) {

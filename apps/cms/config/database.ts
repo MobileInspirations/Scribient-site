@@ -1,4 +1,4 @@
-export default ({ env }: { env: Strapi.EnvFunction }) => ({
+export default ({ env }: { env: any }) => ({
   connection: {
     client: "postgres",
     connection: {

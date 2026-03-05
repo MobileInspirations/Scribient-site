@@ -57,7 +57,7 @@ export async function POST(request: Request) {
   const tags = normalizeTags(model, slug);
   const paths = normalizePath(model, slug);
 
-  tags.forEach((tag) => revalidateTag(tag));
+  tags.forEach((tag) => revalidateTag(tag, "max"));
   paths.forEach((path) => revalidatePath(path));
 
   if (model === "page" || model === "blog-post") {
