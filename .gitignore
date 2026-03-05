@@ -1,0 +1,16 @@
+.next
+.turbo
+.cache
+.vercel
+dist
+coverage
+node_modules
+.env
+.env.*
+!.env.example
+.strapi-updater.json
+build
+.tmp
+.DS_Store
+Thumbs.db
+my-strapi-project/

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_pricing_cards",
+  "info": {
+    "displayName": "Pricing Cards",
+    "icon": "shoppingCart"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.pricing-card"
+    }
+  }
+}

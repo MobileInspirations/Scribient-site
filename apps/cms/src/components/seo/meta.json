@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_seo_meta",
+  "info": {
+    "displayName": "Meta",
+    "icon": "earth"
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "canonicalUrl": {
+      "type": "string"
+    },
+    "metaRobots": {
+      "type": "string"
+    },
+    "keywords": {
+      "type": "json"
+    },
+    "noIndex": {
+      "type": "boolean",
+      "default": false
+    },
+    "openGraphImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "twitterImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

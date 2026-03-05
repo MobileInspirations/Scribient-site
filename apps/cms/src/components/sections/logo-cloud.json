@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_logo_clouds",
+  "info": {
+    "displayName": "Logo Cloud",
+    "icon": "collage"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "logos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.logo-item"
+    }
+  }
+}

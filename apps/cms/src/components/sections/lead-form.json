@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_sections_lead_forms",
+  "info": {
+    "displayName": "Lead Form",
+    "icon": "mail"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "text"
+    },
+    "submitLabel": {
+      "type": "string"
+    }
+  }
+}

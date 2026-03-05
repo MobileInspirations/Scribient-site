@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lead_submissions",
+  "info": {
+    "singularName": "lead-submission",
+    "pluralName": "lead-submissions",
+    "displayName": "Lead Submission"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "practiceName": {
+      "type": "string",
+      "required": true
+    },
+    "practiceType": {
+      "type": "string",
+      "required": true
+    },
+    "currentEhr": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text"
+    },
+    "sourcePage": {
+      "type": "string"
+    },
+    "utm": {
+      "type": "json"
+    },
+    "referrer": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["new", "reviewed", "contacted", "qualified", "archived"],
+      "default": "new"
+    },
+    "submittedAt": {
+      "type": "datetime"
+    }
+  }
+}

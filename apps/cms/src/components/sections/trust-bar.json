@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_sections_trust_bars",
+  "info": {
+    "displayName": "Trust Bar",
+    "icon": "shield"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "json"
+    }
+  }
+}

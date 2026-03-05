@@ -1,0 +1,64 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_settings",
+  "info": {
+    "singularName": "site-setting",
+    "pluralName": "site-settings",
+    "displayName": "Site Settings"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "brandName": {
+      "type": "string",
+      "required": true
+    },
+    "siteUrl": {
+      "type": "string",
+      "required": true
+    },
+    "appUrl": {
+      "type": "string",
+      "required": true
+    },
+    "titleTemplate": {
+      "type": "string",
+      "default": "%s | Scribient"
+    },
+    "defaultDescription": {
+      "type": "text"
+    },
+    "defaultSeo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    },
+    "navigation": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navigation.link"
+    },
+    "footerColumns": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navigation.footer-column"
+    },
+    "socialLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navigation.link"
+    },
+    "salesNotificationEmails": {
+      "type": "json"
+    },
+    "announcementBar": {
+      "type": "component",
+      "repeatable": false,
+      "component": "navigation.link"
+    },
+    "businessContact": {
+      "type": "json"
+    }
+  }
+}

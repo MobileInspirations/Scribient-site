@@ -1,0 +1,21 @@
+{
+  "name": "scribient-platform",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.6.2",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @scribient/web",
+    "dev:web": "npm run dev --workspace @scribient/web",
+    "dev:cms": "npm run develop --workspace @scribient/cms",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  }
+}

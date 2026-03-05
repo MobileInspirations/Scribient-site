@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "pageKind": {
+      "type": "enumeration",
+      "enum": ["home", "standard", "legal", "seo-landing"],
+      "default": "standard"
+    },
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hero.hero"
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.logo-cloud",
+        "sections.feature-grid",
+        "sections.split-content",
+        "sections.stats-band",
+        "sections.testimonials",
+        "sections.pricing-cards",
+        "sections.faq",
+        "sections.rich-text",
+        "sections.timeline",
+        "sections.cta-banner",
+        "sections.recent-posts",
+        "sections.lead-form",
+        "sections.trust-bar"
+      ]
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    }
+  }
+}

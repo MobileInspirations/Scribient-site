@@ -1,0 +1,26 @@
+{
+  "name": "@scribient/cms",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "develop": "node scripts/develop.js",
+    "build": "strapi build",
+    "start": "strapi start",
+    "seed": "tsx src/scripts/seed.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@strapi/provider-upload-aws-s3": "^5.0.0",
+    "@strapi/strapi": "^5.0.0",
+    "pg": "^8.16.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

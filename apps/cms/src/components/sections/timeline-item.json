@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_timeline_items",
+  "info": {
+    "displayName": "Timeline Item",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

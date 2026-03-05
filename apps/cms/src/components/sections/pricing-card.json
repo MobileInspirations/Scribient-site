@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_sections_pricing_cards_items",
+  "info": {
+    "displayName": "Pricing Card",
+    "icon": "shoppingCart"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "string",
+      "required": true
+    },
+    "cadence": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "features": {
+      "type": "json"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cta.button"
+    },
+    "badge": {
+      "type": "string"
+    }
+  }
+}
