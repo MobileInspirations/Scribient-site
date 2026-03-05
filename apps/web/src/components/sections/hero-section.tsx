@@ -15,12 +15,12 @@ export function HeroSection({ section }: { section: HeroSectionType }) {
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             {section.primaryCta ? (
-              <Link href={section.primaryCta.href} className="btn-primary justify-center">
+              <Link href={section.primaryCta.href as never} className="btn-primary justify-center">
                 {section.primaryCta.label}
               </Link>
             ) : null}
             {section.secondaryCta ? (
-              <Link href={section.secondaryCta.href} className="btn-secondary justify-center">
+              <Link href={section.secondaryCta.href as never} className="btn-secondary justify-center">
                 {section.secondaryCta.label}
               </Link>
             ) : null}

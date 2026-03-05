@@ -12,12 +12,12 @@ export function CtaBannerSection({ section }: { section: CtaBannerSectionType })
         {section.body ? <p className="mt-5 max-w-2xl text-lg leading-8 text-white/80">{section.body}</p> : null}
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           {section.primaryCta ? (
-            <Link href={section.primaryCta.href} className="btn-surface justify-center">
+            <Link href={section.primaryCta.href as never} className="btn-surface justify-center">
               {section.primaryCta.label}
             </Link>
           ) : null}
           {section.secondaryCta ? (
-            <Link href={section.secondaryCta.href} className="btn-outline-light justify-center">
+            <Link href={section.secondaryCta.href as never} className="btn-outline-light justify-center">
               {section.secondaryCta.label}
             </Link>
           ) : null}

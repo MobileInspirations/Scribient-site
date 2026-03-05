@@ -24,7 +24,7 @@ export function SiteHeader({ settings }: { settings: SiteSettings }) {
           {settings.navigation.map((item) => (
             <Link
               key={item.href}
-              href={item.href}
+              href={item.href as never}
               className="text-sm font-medium text-[var(--color-muted)] transition-colors hover:text-[var(--color-ink)]"
             >
               {item.label}
@@ -33,7 +33,7 @@ export function SiteHeader({ settings }: { settings: SiteSettings }) {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <Link href={settings.appUrl + "/login"} className="btn-secondary">
+          <Link href={(settings.appUrl + "/login") as never} className="btn-secondary">
             Sign in
           </Link>
           <Link href="/demo" className="btn-primary">
@@ -75,7 +75,7 @@ export function SiteHeader({ settings }: { settings: SiteSettings }) {
             {settings.navigation.map((item) => (
               <Link
                 key={item.href}
-                href={item.href}
+                href={item.href as never}
                 className="rounded-2xl px-4 py-3 text-sm font-medium text-[var(--color-ink)] hover:bg-[var(--color-paper)]"
                 onClick={() => setOpen(false)}
               >
@@ -84,7 +84,7 @@ export function SiteHeader({ settings }: { settings: SiteSettings }) {
             ))}
             <div className="mt-3 grid gap-2">
               <Link
-                href={settings.appUrl + "/login"}
+                href={(settings.appUrl + "/login") as never}
                 className="btn-secondary justify-center"
                 onClick={() => setOpen(false)}
               >

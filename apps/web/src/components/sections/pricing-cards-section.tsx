@@ -44,7 +44,7 @@ export function PricingCardsSection({ section }: { section: PricingCardsSectionT
                 </li>
               ))}
             </ul>
-            <Link href={card.cta.href} className="btn-primary mt-8 justify-center">
+            <Link href={card.cta.href as never} className="btn-primary mt-8 justify-center">
               {card.cta.label}
             </Link>
           </div>

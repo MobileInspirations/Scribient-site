@@ -33,7 +33,7 @@ export function SiteFooter({ settings }: { settings: SiteSettings }) {
             <ul className="space-y-3 text-sm text-[var(--color-muted)]">
               {column.links.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="transition-colors hover:text-[var(--color-ink)]">
+                  <Link href={link.href as never} className="transition-colors hover:text-[var(--color-ink)]">
                     {link.label}
                   </Link>
                 </li>
@@ -48,7 +48,7 @@ export function SiteFooter({ settings }: { settings: SiteSettings }) {
           <p>© {new Date().getFullYear()} {settings.brandName}. All rights reserved.</p>
           <div className="flex items-center gap-4">
             {settings.socialLinks.map((link) => (
-              <Link key={link.href} href={link.href} target={link.target} className="hover:text-[var(--color-ink)]">
+              <Link key={link.href} href={link.href as never} target={link.target} className="hover:text-[var(--color-ink)]">
                 {link.label}
               </Link>
             ))}
