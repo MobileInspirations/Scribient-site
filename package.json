@@ -15,6 +15,7 @@
     "dev:web": "npm run dev --workspace @scribient/web",
     "dev:cms": "npm run develop --workspace @scribient/cms",
     "build": "npm run build --workspaces --if-present",
+    "start": "npm run start --workspace @scribient/web",
     "lint": "npm run lint --workspaces --if-present",
     "typecheck": "npm run typecheck --workspaces --if-present"
   }
