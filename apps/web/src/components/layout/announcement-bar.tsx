@@ -19,7 +19,7 @@ export function AnnouncementBar({ settings }: { settings: SiteSettings }) {
     <div className="border-b border-[var(--color-border)] bg-[var(--color-paper)]">
       <div className="mx-auto flex max-w-7xl items-center justify-center px-4 py-3 sm:px-6 lg:px-8">
         {settings.announcementBar.href ? (
-          <Link href={settings.announcementBar.href} className="transition-opacity hover:opacity-80">
+          <Link href={settings.announcementBar.href as never} className="transition-opacity hover:opacity-80">
             {content}
           </Link>
         ) : (
